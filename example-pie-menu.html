@@ -1,0 +1,53 @@
+<html>
+<head>
+    <link rel="stylesheet" href="./libs/modal/modal.css">
+    <link rel="stylesheet" href="./libs/pie-menu/pie.css">
+    <script src="./libs/helper/helpers.js"></script>
+    <script src="./libs/forms/formCreator.js"></script>
+</head>
+<body>
+
+<script>
+
+let menu = {
+	a:{
+		title:"A",
+		action:() => log("a")
+	},
+	b:{
+		title:"B",
+		action:() => log("b")
+	},
+	c:{
+		title:"C",
+		action:() => log("c")
+	},
+	d:{
+		title:"D",
+		subchoice:{
+			aa:{
+				title:"AA",
+				action:() => log("aa")
+			},
+			bb:{
+				title:"BB",
+				action:() => log("bb")
+			},
+			cc:{
+				title:"Hey",
+				action:() => log("Hay")
+			}
+		}
+	}
+};
+</script>
+
+<div id="greyedZoneId" class="modal">
+    <div id="pieMenuId">
+    </div>
+</div>
+
+<script src="./libs/pie-menu/pieMenu.js"></script>
+
+</body>
+</html>

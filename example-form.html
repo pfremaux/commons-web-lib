@@ -1,0 +1,37 @@
+<html>
+<head>
+    <script src="./libs/helper/helpers.js"></script>
+    <script src="./libs/forms/formCreator.js"></script>
+</head>
+<body>
+
+<div id="containerId">
+</div>
+
+<script>
+    let container = id('containerId');
+    let labelName = new Element('label')
+            .withText('Name:')
+            .withId('idLabelName')
+            .forId('idName')
+            .get();
+    container.appendChild(labelName);
+    let name = new Element('input')
+            .withId('idName')
+            .get();
+    container.appendChild(name);
+    let button = new Element('button')
+            .withText('Go !')
+            .onClick(e => {
+            let out = id('outputId');
+            out.innerHTML = out.innerHTML + id('idName').value;
+            id('idName').value = '';
+    }).get();
+    container.appendChild(button);
+    container.appendChild(new Element('br').get());
+    let output = new Element('textarea').withId('outputId').get();
+    container.appendChild(output);
+</script>
+
+</body>
+</html>
